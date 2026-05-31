@@ -28,8 +28,8 @@ retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
 # 6. Use small local model
 generator = pipeline(
-    "text2text-generation",
-    model="google/flan-t5-base",
+    "text-generation",
+    model="distilgpt2",
     max_new_tokens=200
 )
 
@@ -50,7 +50,7 @@ Answer:
 """
 
     result = generator(prompt)
-    return result[0]["generated_text"]
+    return result[0]["generated_text"].replace(prompt, "").strip()
 
 if __name__ == "__main__":
     question = "What is RAG?"
