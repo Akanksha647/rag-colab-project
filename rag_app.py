@@ -29,7 +29,11 @@ retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 # 6. Use small local model
 generator = pipeline(
     "text-generation",
+<<<<<<< HEAD
     model="distilgpt2"
+=======
+    model="distilgpt2",
+>>>>>>> e330b88db0b951f0b3e10631462fd8b68ea9a4d1
     max_new_tokens=200
 )
 
