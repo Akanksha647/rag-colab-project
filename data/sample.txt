@@ -1,0 +1,3 @@
+NVIDIA GPUs are used for AI training and inference.
+RAG combines retrieval with language generation.
+Vector databases store embeddings for semantic search.
